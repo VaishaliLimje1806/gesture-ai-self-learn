@@ -10,7 +10,6 @@
 Build a system that detects hand gestures via webcam and maps them to real-world computer actions like:
 - Swiping slides
 - Taking screenshots
-- Pausing/playing videos
 - Switching tabs/windows
 - Moving cursor
 - **Clicking with pinch gesture**
@@ -26,7 +25,6 @@ Build a system that detects hand gestures via webcam and maps them to real-world
 - ✅ Screenshot trigger with gesture-hold
 - ✅ Swipe left/right gesture for tab switching
 - ✅ Clean modular Python scripts for each phase
-- ✅ Code committed daily with GitHub history
 
 ---
 
@@ -46,29 +44,31 @@ Build a system that detects hand gestures via webcam and maps them to real-world
 git clone https://github.com/VaishaliLimje1806/gesture-ai-self-learn
 cd gesture-ai-self-learn
 pip install -r requirements.txt
-python mouse_click.py
+python main.py
+
+⚠️ Make sure your webcam is enabled, and use the system in good lighting conditions.
 ```
 
 ---
 ## 📁 Project Phases
 
-| Phase    | Task Description                                         | File(s)                    |
-|----------|----------------------------------------------------------|----------------------------|
-| Phase 1  | Open webcam and display layout                           | `main.py`                  |
-| Phase 2  | Hand detection with MediaPipe                            | `hand_detection.py`        |
-| Phase 3  | Finger gesture tracking (UP/DOWN)                        | `gesture_classification.py`|
-| Phase 4  | Gesture mapped to actions (screenshot, play/pause)      | `gesture_action.py`        |
-| Phase 5  | Smoothed fingertip tracking for mouse cursor            | `mouse_control.py`         |
-| Phase 6  | **Pinch-to-click gesture simulation**                   | `mouse_click.py` ✅         |
+| Phase    | Task Description                                         | File(s)              |
+|----------|----------------------------------------------------------|----------------------|
+| Phase 1  | Open webcam and display layout                           | `main.py`            |
+| Phase 2  | Hand detection with MediaPipe                            | `detection.py`       |
+| Phase 3  | Finger gesture logic (pinch, swipe, hold)                | `gesture_utils.py`   |
+| Phase 4  | Gesture-triggered actions (click, screenshot, tab switch)| `gesture_actions.py` |
+| Phase 5  | Smoothed cursor control via fingertip                   | `mouse_control.py`   |
+| Phase 6  | On-screen gesture feedback overlay                       | `ui_utils.py`        |
+| Phase 7  | Final integration of all modules                         | `main.py`            |
 
 ---
 
 ## 📚 Author's Note
 
-> This project is part of my hands-on AI learning journey. Every phase was built from scratch — no tutorials, no shortcuts.  
-> It helped me master OpenCV, gesture logic, and real-time input handling in Python.  
->  
-> I’m sharing it openly to inspire other learners and showcase how solo projects can become practical tools.
+> This was a self-driven AI mini-project to break into real-time automation using vision.
+I used no pre-built code or tutorials — just documentation, reasoning, and trial & error.
+It helped me master OpenCV, gesture-based UX, real-time event detection, and modular Python design.
 
 ---
 
